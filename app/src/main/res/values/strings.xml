@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">VC Remote</string>
+    <string name="nav_bottom_bar_home">Home</string>
+    <string name="nav_bottom_bar_devices">Devices</string>
+    <string name="nav_bottom_bar_settings">Settings</string>
+
+    <string name="remaining_time_title">Remaining time</string>
+    <string name="turnOn_btn">Turn On</string>
+    <string name="turnOff_btn">Turn Off</string>
 </resources>
