@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">VC Remote</string>
+    <!-- Bottom navigation bar -->
     <string name="nav_bottom_bar_home">Home</string>
     <string name="nav_bottom_bar_devices">Devices</string>
     <string name="nav_bottom_bar_settings">Settings</string>
-
+    <!-- Home screen -->
     <string name="remaining_time_title">Remaining time</string>
     <string name="turnOn_btn">Turn On</string>
     <string name="turnOff_btn">Turn Off</string>
+    <!-- Settings -->
+    <string name="notification">Enable message notifications</string>
+    <string name="language">Language</string>
+    <string name="feedback">Feedback</string>
+    <string name="about_app">About app</string>
 </resources>
