@@ -21,21 +21,21 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        final Button powerBtn = (Button) getView().findViewById(R.id.turn_on_btn);
-        powerBtn.setTag(1);
+        final Button btnPower = (Button) getView().findViewById(R.id.turn_on_btn);
+        btnPower.setTag("turnOn");
 
-        powerBtn.setOnClickListener(new View.OnClickListener() {
+        btnPower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final int status = (int) v.getTag();
-                if(status == 1) {
-                    powerBtn.setText(R.string.turnOff_btn);
-                    powerBtn.setBackgroundResource(R.drawable.bg_turn_off_btn);
-                    v.setTag(0);
+                final String status = (String) v.getTag();
+                if(status.equals("turnOn")) {
+                    btnPower.setText(R.string.turnOff_btn);
+                    btnPower.setBackgroundResource(R.drawable.bg_turn_off_btn);
+                    v.setTag("turnOff");
                 } else {
-                    powerBtn.setText(R.string.turnOn_btn);
-                    powerBtn.setBackgroundResource(R.drawable.bg_turn_on_btn);
-                    powerBtn.setTag(1);
+                    btnPower.setText(R.string.turnOn_btn);
+                    btnPower.setBackgroundResource(R.drawable.bg_turn_on_btn);
+                    btnPower.setTag("turnOn");
                 }
             }
         });

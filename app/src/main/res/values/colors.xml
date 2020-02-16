@@ -3,7 +3,6 @@
     <color name="colorPrimary">#00B4A8</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorPrimaryLight">#D5FEFB</color>
-    <color name="colorSelectedDevice">#31E2D6</color>
-    <color name="colorBlueDark">#003F70</color>
+    <color name="primaryLight">#D5FEFB</color>
+    <color name="blueDark">#003F70</color>
 </resources>

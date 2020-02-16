@@ -20,7 +20,7 @@
         android:textColor="@android:color/white"
         android:text="@string/remaining_time_title"
         android:layout_marginBottom="10dp"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <TextView
         android:id="@+id/remaining_time"
@@ -30,13 +30,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_remaining_time"
         app:layout_constraintBottom_toTopOf="@id/battery_percent"
-        android:textColor="@color/colorBlueDark"
+        android:textColor="@color/blueDark"
         android:textSize="28sp"
         android:textAlignment="center"
         android:padding="5dp"
         android:background="@drawable/bg_remaining_time"
         android:layout_marginBottom="20dp"
-        tools:text="1:23:45" />
+        tools:text="1:23:45"/>
 
     <TextView
         android:id="@+id/battery_percent"
@@ -50,8 +50,7 @@
         android:textAlignment="center"
         android:textSize="28sp"
         android:padding="5dp"
-        tools:text="100%"
-        />
+        tools:text="100%"/>
 
     <Button
         android:id="@+id/turn_on_btn"
@@ -69,6 +68,6 @@
         android:drawableEnd="@drawable/ic_power_btn"
         android:padding="16dp"
         android:textAllCaps="false"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
