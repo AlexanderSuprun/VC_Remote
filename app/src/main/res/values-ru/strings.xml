@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VC Remote</string>
+    <string name="about_app">О приложении</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="language">Язык</string>
+    <string name="nav_bottom_bar_devices">Устройства</string>
+    <string name="nav_bottom_bar_home">Домашняя страница</string>
+    <string name="nav_bottom_bar_settings">Настройки</string>
+    <string name="notification">Включить push уведомления</string>
+    <string name="remaining_time_title">Оставшееся время работы</string>
+    <string name="turnOff_btn">Выключить</string>
+    <string name="turnOn_btn">Включить</string>
+</resources>

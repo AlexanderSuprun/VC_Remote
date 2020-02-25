@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        final Button btnPower = (Button) getView().findViewById(R.id.turn_on_btn);
+        final Button btnPower = (Button) getView().findViewById(R.id.fragment_home_turn_on_btn);
         btnPower.setTag("turnOn");
 
         btnPower.setOnClickListener(new View.OnClickListener() {
