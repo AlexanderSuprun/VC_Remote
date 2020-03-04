@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 
 import android.Manifest;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -14,12 +15,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
+    //TODO delete in future
+    StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        StrictMode.setThreadPolicy(threadPolicy);
         BottomNavigationView bottomNav = findViewById(R.id.activity_main_bottom_nav_bar);
         bottomNav.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
 

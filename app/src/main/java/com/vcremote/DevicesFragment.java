@@ -30,6 +30,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import kotlin.reflect.KParameter;
+
 
 public class DevicesFragment extends Fragment {
     private ListView listView;
@@ -42,7 +44,7 @@ public class DevicesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_devices, container, false);
     }
-
+    //TODO rework to scan network
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -67,9 +69,9 @@ public class DevicesFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = (String) parent.getSelectedItem();
+                String selectedItem = parent.getSelectedItem().toString();
+                //Log.d("Selected item", parent.getSelectedItem().toString()); // return null
                 connectToDeviceUsingWifi(selectedItem, connectionData.get(selectedItem));
-                Log.d("Info ", "On item click");
             }
         });
     }
@@ -90,9 +92,6 @@ public class DevicesFragment extends Fragment {
             networkRequestBuilder.addCapability(NetworkCapabilities.NET_CAPABILITY_TRUSTED);
             networkRequestBuilder.setNetworkSpecifier(wifiNetworkSpecifier);
             NetworkRequest networkRequest = networkRequestBuilder.build();
-
-//            bundle.putParcelable("NetworkRequest", networkRequest);
-
             ConnectivityManager cm = (ConnectivityManager) Objects.requireNonNull(getActivity())
                     .getApplicationContext()
                     .getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -119,8 +118,10 @@ public class DevicesFragment extends Fragment {
             WifiConfiguration config = new WifiConfiguration();
             config.SSID = "\"" + networkSSID + "\"";
             config.preSharedKey = "\"" + networkPassword + "\"";
-            config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+            config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
             int networkID = wifiManager.addNetwork(config);
+            Log.d("Network SSID", networkSSID);
+            Log.d("Network pass", networkPassword);
             wifiManager.disconnect();
             result = wifiManager.enableNetwork(networkID, true);
             Log.d("Result = wifiManager", String.valueOf(result));

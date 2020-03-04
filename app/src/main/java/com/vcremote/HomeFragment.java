@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,9 +37,8 @@ public class HomeFragment extends Fragment {
                 .getApplicationContext()
                 .getSystemService(Context.WIFI_SERVICE);
         if (wifiManager != null && wifiManager.getConnectionInfo() != null) {
-            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-
-            if (wifiInfo.getSSID().equals(SSID)) {
+//            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+//            if (wifiInfo.getSSID().equals(SSID)) {
                 btnPower.setEnabled(true);
                 btnPower.setTag("turnOn");
                 btnPower.setOnClickListener(new View.OnClickListener() {
@@ -66,13 +66,13 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-            }
+//            }
         }
     }
 
     private void sendHttpRequest(boolean enableDevice) throws IOException {
-        final String TURN_ON_URL = "http://192.168.1.1/turn_on";
-        final String TURN_OFF_URL = "http://192.168.1.1/turn_off";
+        final String TURN_ON_URL = "http:/192.168.1.1/turn_on";
+        final String TURN_OFF_URL = "http:/192.168.1.1/turn_off";
         OkHttpClient client = new OkHttpClient();
 
         if (enableDevice) {
