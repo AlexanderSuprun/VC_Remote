@@ -6,8 +6,10 @@
     <string name="nav_bottom_bar_settings">Settings</string>
     <!-- Home screen -->
     <string name="remaining_time_title">Remaining time</string>
-    <string name="turnOn_btn">Turn On</string>
-    <string name="turnOff_btn">Turn Off</string>
+    <string name="turn_on_btn">Turn On</string>
+    <string name="turn_off_btn">Turn Off</string>
+    <!-- Devices -->
+    <string name="no_available_devices">No available devices nearby</string>
     <!-- Settings -->
     <string name="notification">Enable push notifications</string>
     <string name="language">Language</string>

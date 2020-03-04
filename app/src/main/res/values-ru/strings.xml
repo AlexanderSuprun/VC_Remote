@@ -9,6 +9,7 @@
     <string name="nav_bottom_bar_settings">Настройки</string>
     <string name="notification">Включить push уведомления</string>
     <string name="remaining_time_title">Оставшееся время работы</string>
-    <string name="turnOff_btn">Выключить</string>
-    <string name="turnOn_btn">Включить</string>
+    <string name="turn_off_btn">Выключить</string>
+    <string name="turn_on_btn">Включить</string>
+    <string name="no_available_devices">Поблизости нет доступных устройств</string>
 </resources>

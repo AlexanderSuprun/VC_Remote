@@ -5,12 +5,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ListView
-        android:id="@+id/fragment_devices_listview_available_wifiAP"
+        android:id="@+id/fragment_devices_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/fragment_devices_empty_list_message"
+        android:text="@string/no_available_devices"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

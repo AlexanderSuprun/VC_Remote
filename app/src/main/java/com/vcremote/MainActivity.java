@@ -6,10 +6,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.Manifest;
-import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new SettingsFragment();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_container,
-                            selectedFragment).commit();
+                    if (selectedFragment != null)
+                        getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_container,
+                                selectedFragment).commit();
                     return true;
                 }
             };
