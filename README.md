@@ -1,3 +1,3 @@
 # VC_Remote
-<h4>Android app for controlling robot vacuum cleaner</h4>
-<h3>Device is controlled via WiFi</h3>
+<h3>Android app for controlling robot vacuum cleaner</h3>
+<h4>Device is controlled via WiFi</h4>
