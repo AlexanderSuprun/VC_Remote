@@ -25,9 +25,11 @@ import java.util.Objects;
 
 public class DevicesFragment extends Fragment {
     private ListView listView;
-    private String ssid = "ESP32-Access-Point";
-    private String password = "123456789";
+    private String ssid = "ESP8266-Access-Point";
+    private String password = "PEGw5QivntQfhu";
 
+    private Bundle bundle = new Bundle();
+    private Fragment HomeFragment = new HomeFragment();
 
     @Nullable
     @Override
@@ -48,10 +50,15 @@ public class DevicesFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = view.toString();
-                Log.d("Selected item", selectedItem);
-                if (connectToDeviceUsingWifi(ssid, password)) {
-                    view.setSelected(true);
+                if (!view.isSelected()) {
+                    if (connectToDeviceUsingWifi(ssid, password)) {
+                        view.setSelected(true);
+//                        HomeFragment.setArguments(bundle);
+//                        getFragmentManager()
+//                                .beginTransaction()
+//                                .replace()
+//                                .commit();
+                    }
                 }
             }
         });

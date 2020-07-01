@@ -21,7 +21,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
 public class HomeFragment extends Fragment {
-    private final String SSID = "ESP32-Access-Point";
+    private final String SSID = "ESP8266-Access-Point";
 
     @Nullable
     @Override
@@ -37,8 +37,6 @@ public class HomeFragment extends Fragment {
                 .getApplicationContext()
                 .getSystemService(Context.WIFI_SERVICE);
         if (wifiManager != null && wifiManager.getConnectionInfo() != null) {
-//            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-//            if (wifiInfo.getSSID().equals(SSID)) {
                 btnPower.setEnabled(true);
                 btnPower.setTag("turnOn");
                 btnPower.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +64,6 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-//            }
         }
     }
 
