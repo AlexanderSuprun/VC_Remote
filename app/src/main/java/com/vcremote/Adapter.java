@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-
+/**
+ * Adapter for network list
+ */
 public class Adapter extends ArrayAdapter<String> {
 
     private Context context;

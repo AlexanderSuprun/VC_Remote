@@ -30,6 +30,9 @@ public class HomeFragment extends Fragment {
 
     }
 
+    /**
+     * Controls turn on button
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         final Button btnPower = (Button) Objects.requireNonNull(getView()).findViewById(R.id.fragment_home_turn_on_btn);
@@ -67,6 +70,13 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    /**
+     * Sends HTTP request to server
+     * @param enableDevice set true to enable device or false to disable
+     * @throws IOException if the request could not be executed due to cancellation, a connectivity
+     *      problem or timeout. Because networks can fail during an exchange, it is possible that the
+     *      remote server accepted the request before the failure.
+     */
     private void sendHttpRequest(boolean enableDevice) throws IOException {
         final String TURN_ON_URL = "http:/192.168.1.1/turn_on";
         final String TURN_OFF_URL = "http:/192.168.1.1/turn_off";

@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 new HomeFragment()).commit();
     }
 
+    /**
+     * Disconnects from WiFi network
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         wifiManager.disconnect();
     }
 
+    /**
+     * Controls BottomNavigationBar
+     */
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override

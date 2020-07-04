@@ -64,6 +64,12 @@ public class DevicesFragment extends Fragment {
         });
     }
 
+    /**
+     * Connects to device using WiFi network
+     * @param networkSSID SSID for WiFi network
+     * @param networkPassword password for WiFi network
+     * @return true if connected successfully
+     */
     private boolean connectToDeviceUsingWifi(String networkSSID, String networkPassword) {
         boolean result = false;
 
