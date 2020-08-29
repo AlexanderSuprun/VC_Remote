@@ -1,21 +1,20 @@
-package com.vcremote;
+package com.vcremote.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-
-import android.Manifest;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.Log;
 import android.view.MenuItem;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import java.util.Objects;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.vcremote.fragment.DevicesFragment;
+import com.vcremote.fragment.HomeFragment;
+import com.vcremote.R;
+import com.vcremote.fragment.SettingsFragment;
 
 
 public class MainActivity extends AppCompatActivity {

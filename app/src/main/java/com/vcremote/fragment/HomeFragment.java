@@ -1,4 +1,4 @@
-package com.vcremote;
+package com.vcremote.fragment;
 
 import android.content.Context;
 import android.net.wifi.WifiInfo;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.vcremote.R;
 
 import java.io.IOException;
 import java.util.Objects;

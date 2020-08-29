@@ -1,4 +1,4 @@
-package com.vcremote;
+package com.vcremote.fragment;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -19,6 +19,9 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.vcremote.R;
+import com.vcremote.utils.adapter.Adapter;
 
 import java.util.Objects;
 
