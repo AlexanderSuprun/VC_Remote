@@ -21,12 +21,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.vcremote.R;
+import com.vcremote.base.BaseFragment;
 import com.vcremote.utils.adapter.Adapter;
 
 import java.util.Objects;
 
 
-public class DevicesFragment extends Fragment {
+public class DevicesFragment extends BaseFragment {
     private ListView listView;
     private String ssid = "ESP8266-Access-Point";
     private String password = "PEGw5QivntQfhu";

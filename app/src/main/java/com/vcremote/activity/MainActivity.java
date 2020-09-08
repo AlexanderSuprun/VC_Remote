@@ -7,17 +7,17 @@ import android.os.StrictMode;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.vcremote.R;
+import com.vcremote.base.BaseActivity;
 import com.vcremote.fragment.DevicesFragment;
 import com.vcremote.fragment.HomeFragment;
-import com.vcremote.R;
 import com.vcremote.fragment.SettingsFragment;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
     @Override

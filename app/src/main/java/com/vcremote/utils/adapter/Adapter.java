@@ -20,7 +20,7 @@ public class Adapter extends ArrayAdapter<String> {
     private Context context;
     private String[] rData;
 
-    Adapter (Context c, String[] data) {
+    public Adapter (Context c, String[] data) {
         super(c, R.layout.list_item, R.id.list_item_title, data);
         this.context = c;
         this.rData = data;

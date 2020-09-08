@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fragment_settings_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_height"
+                android:src="@drawable/ic_notification_32dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_margin_small"
+                android:contentDescription="@string/enable_notification" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/settings_switch_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_item_height"
+                android:padding="@dimen/settings_item_padding"
+                android:text="@string/push_notification_text_title"
+                android:textSize="@dimen/default_text_size_setting_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_height"
+                android:src="@drawable/ic_language_32dp"
+                android:layout_margin="@dimen/default_margin_small"
+                android:contentDescription="@string/language"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language"
+                android:textSize="@dimen/default_text_size_setting_item"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/default_margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settings_language_spinner"
+                android:layout_gravity="center_vertical|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/languages" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/settings_item_feedback"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_height"
+                android:src="@drawable/ic_feedback_32dp"
+                android:layout_margin="@dimen/default_margin_small"
+                android:contentDescription="@string/feedback"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/feedback"
+                android:textSize="@dimen/default_text_size_setting_item"
+                android:textColor="@android:color/black"
+                android:layout_margin="@dimen/default_margin_small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_item_about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_height"
+                android:src="@drawable/ic_info_outline_32dp"
+                android:layout_margin="@dimen/default_margin_small"
+                android:contentDescription="@string/about_app"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app"
+                android:textSize="@dimen/default_text_size_setting_item"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/default_margin_small"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
